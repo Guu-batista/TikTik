@@ -10,29 +10,17 @@ import SwiftUI
 struct ContentView: View {
     
     @ObservedObject var TicTac = tiktikModel()
+   
     var body: some View {
         VStack{
             Text("TIK TIK")
                 .font(.system(size: 45, weight: .heavy))
-            
-            let col = Array(repeating: GridItem(.flexible()), count: 3)
-            
-            LazyVGrid(columns: col, content: {
-                ForEach(0..<9){ i in
-                    Button(action: {
-                        //action
-                        TicTac.buttonTapped(i: i)
-                    }, label: {
-                        Text(TicTac.buttonLabel(i: i))
-                            .frame(width: 100, height: 100)
-                            .background(.blue)
-                            .foregroundStyle(.white)
-                            .font(.system(size: 45, weight: .heavy))
-                    })
-                }
-            })
-            .padding(.bottom)
-            
+            Spacer()
+           TikTikGrid()
+            Spacer()
+            Text("Score: ")
+            Text("Player X: \(TicTac.scorePlayer1)")
+            Text("Player O: \(TicTac.scorePlayer2)")
             Button(action: {
                 TicTac.resetGame()
             }, label: {

@@ -12,6 +12,7 @@
 		9E7DD84E2BCD4D6D00925BE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E7DD84D2BCD4D6D00925BE6 /* Assets.xcassets */; };
 		9E7DD8512BCD4D6D00925BE6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E7DD8502BCD4D6D00925BE6 /* Preview Assets.xcassets */; };
 		9E7DD8582BCD5A6000925BE6 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7DD8572BCD5A6000925BE6 /* GameLogic.swift */; };
+		9E7DD85D2BD13A1D00925BE6 /* TikTikGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7DD85C2BD13A1D00925BE6 /* TikTikGrid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		9E7DD84D2BCD4D6D00925BE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E7DD8502BCD4D6D00925BE6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9E7DD8572BCD5A6000925BE6 /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
+		9E7DD85C2BD13A1D00925BE6 /* TikTikGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikTikGrid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				9E7DD8492BCD4D6C00925BE6 /* TikTikApp.swift */,
 				9E7DD84B2BCD4D6C00925BE6 /* ContentView.swift */,
+				9E7DD85C2BD13A1D00925BE6 /* TikTikGrid.swift */,
 				9E7DD8572BCD5A6000925BE6 /* GameLogic.swift */,
 				9E7DD84D2BCD4D6D00925BE6 /* Assets.xcassets */,
 				9E7DD84F2BCD4D6D00925BE6 /* Preview Content */,
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E7DD8582BCD5A6000925BE6 /* GameLogic.swift in Sources */,
+				9E7DD85D2BD13A1D00925BE6 /* TikTikGrid.swift in Sources */,
 				9E7DD84C2BCD4D6C00925BE6 /* ContentView.swift in Sources */,
 				9E7DD84A2BCD4D6C00925BE6 /* TikTikApp.swift in Sources */,
 			);

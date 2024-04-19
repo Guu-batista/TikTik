@@ -18,8 +18,9 @@ class tiktikModel: ObservableObject{
     @Published var activePlayer: Player = .x
     @Published var winner:Player? = nil
     @Published var jogadas: [Int] = []
+    @Published var scorePlayer1: Int = 0
+    @Published var scorePlayer2: Int = 0
     
-  
     func buttonTapped(i: Int) {
             guard winner == nil else {
                 return
@@ -40,7 +41,7 @@ class tiktikModel: ObservableObject{
                 if checkWinner() {
                     // Existe um vencedor
                     winner = activePlayer
-                    print("\(activePlayer) has won the game")
+                    updateScore()
                 } else {
                     // Alterna para o próximo jogador
                     activePlayer = (activePlayer == .x) ? .o : .x
@@ -62,8 +63,8 @@ class tiktikModel: ObservableObject{
     func resetGame() {
         board = Array(repeating: nil, count:9)
         jogadas.removeAll()
-        activePlayer = .x
         winner = nil
+        print("resetei o game")
     }
     
     
@@ -76,12 +77,11 @@ class tiktikModel: ObservableObject{
             }
         }
         //collums
-        for i in 0..<3{
-            if board[i] == activePlayer && board[i+1] == activePlayer && board[i+2] == activePlayer {
+        for i in 0..<3 {
+            if board[i] == activePlayer && board[i+3] == activePlayer && board[i+6] == activePlayer {
                 return true
             }
-        }
-        //diagonals
+        }        //diagonals
         if board[0] == activePlayer && board[4] == activePlayer && board[8] == activePlayer{
             return true
         }
@@ -90,4 +90,19 @@ class tiktikModel: ObservableObject{
         }
         return false
     }
+    
+    // Update Winner Score
+    func updateScore() {
+        if let winner = self.winner{
+            switch winner {
+                      case .x:
+                          scorePlayer1 += 1
+                print("\(scorePlayer1)")
+                      case .o:
+                          scorePlayer2 += 1
+                print("\(scorePlayer2)")
+                      }
+        }
+    }
+    
 }
